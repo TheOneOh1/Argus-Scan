@@ -31,7 +31,7 @@ Argus-Scan is a comprehensive, open-source vulnerability assessment tool designe
 | **Security Headers** | Checks for missing or misconfigured HTTP security headers (HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy). TLS verification is **on by default**; use `--insecure` only for lab or self-signed targets. |
 | **SSL/TLS Inspection** | Validates certificate expiry and connection to port 443. |
 | **Vulnerability Scanning** | With `--full`, runs Nikto (web vulnerability scanner) and Nuclei (template-based scanning). |
-| **Dashboard Reporting** | Generates a dark-themed HTML dashboard and a detailed Markdown report with severity counts and recommendations. |
+| **Dashboard Reporting** | Generates an elegant "Intelligence Dossier" HTML report (with dark/light mode toggle), and a detailed Markdown report with severity counts and recommendations. |
 | **CI/CD Ready** | GitLab CI configuration for building the image and running scans with reports as artifacts. |
 
 ---
@@ -175,7 +175,7 @@ Reports are written under the directory given by `--output` (default: `reports/`
 
 | Type | File pattern | Purpose |
 |------|--------------|--------|
-| **HTML** | `vapt_report_<target>_<YYYYMMDD_HHMMSS>.html` | Dark-themed dashboard for management. |
+| **HTML** | `vapt_report_<target>_<YYYYMMDD_HHMMSS>.html` | "Intelligence Dossier" aesthetic dashboard with dark/light mode toggle. |
 | **Markdown** | `vapt_report_<target>_<YYYYMMDD_HHMMSS>.md` | Technical summary and raw module output in collapsible sections. |
 
 Both include:
