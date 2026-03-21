@@ -582,8 +582,7 @@
                         <h3>{{ finding.name }}</h3>
                         <p>{{ finding.description }}</p>
                     </div>
-                    <div class="finding-meta"
-                        style="color: var(--{% if finding.severity == 'CRITICAL' %}critical{% elif finding.severity == 'HIGH' %}high{% elif finding.severity == 'MEDIUM' %}medium{% else %}low{% endif %});">
+                    <div class="finding-meta" style="color: {{ 'var(--' ~ finding.severity|lower ~ ')' }};">
                         {{ finding.current or "N/A" }}
                     </div>
                     <div class="finding-recommendation">
